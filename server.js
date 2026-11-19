@@ -94,6 +94,8 @@ app.get("/total-mensagens", async (req, res) => {
     catch (erro) { res.status(500).json({ erro: "Falha na contagem." }); }
 });
 
+app.use((express.static("public")));
+
 
 app.listen(PORT, () => {
     console.log(`Servidor em http://localhost:${PORT}`);
